@@ -126,4 +126,14 @@ return array(
     */
     'email_queue' => 'default',
 
+	/*
+    |--------------------------------------------------------------------------
+    | Login attributes
+    |--------------------------------------------------------------------------
+    |
+    | Specify any attributs that may be used as login identifiers
+    |
+    */
+    'login_attributes' => ['email']
+
 );

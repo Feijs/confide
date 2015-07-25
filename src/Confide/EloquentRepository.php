@@ -98,10 +98,7 @@ class EloquentRepository implements RepositoryInterface
      */
     public function getUserByEmailOrUsername($emailOrUsername)
     {
-        $identity = [
-            'email' => $emailOrUsername,
-            'username' => $emailOrUsername
-        ];
+    	$identity = array_fill_keys($this->app['config']->get('confide::login_attributes'), $emailOrUsername);
 
         return $this->getUserByIdentity($identity);
     }
